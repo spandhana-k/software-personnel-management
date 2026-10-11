@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software Personnel Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+    <h1>💜 HR Dashboard</h1>
+    <p>Welcome to your Personnel Management System ✨</p>
+</header>
+
+<div class="dashboard-cards">
+    <div class="dashboard-card">
+        <h3>👥 Total Employees</h3>
+        <p id="totalEmployees">0</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>✅ Present Today</h3>
+        <p id="presentToday">0</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>🌸 Leave Requests</h3>
+        <p id="leaveRequests">0</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>💰 Salary Records</h3>
+        <p id="salaryRecords">0</p>
+    </div>
+</div>
+    <h1>Software Personnel Management System</h1>
+    <p>Welcome to our personnel management system</p>
+    <h2>👥 Employee Registration</h2>
+    <form>
+        <label>Employee ID:</label>
+        <input type="text" placeholder="Enter employee ID">
+        <br><br>
+        <label>Employee Name:</label>
+        <input type="text" placeholder="Enter employee name">
+        <br><br>
+        <label>Department:</label>
+        <input type="text" placeholder="Enter department">
+        <br><br>
+        <label>Designation:</label>
+        <input type="text" placeholder="Enter designation">
+        <br><br>
+        <button type="button">Add Employee</button>
+     </form>
+     <h2>📋 Employee Records</h2>
+
+<table border="1">
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Designation</th>
+        <th>Action</th>
+    </tr>
+    <tbody id="employeeList">
+    </tbody>
+</table>
+<h2>📅 Attendance Management</h2>
+
+<label>Employee ID:</label>
+<input type="text" id="attendanceId" placeholder="Enter employee ID">
+<br><br>
+
+<label>Date:</label>
+<input type="date" id="attendanceDate">
+<br><br>
+
+<label>Status:</label>
+<select id="attendanceStatus">
+    <option value="Present">Present</option>
+    <option value="Absent">Absent</option>
+</select>
+<br><br>
+
+<button type="button" id="markAttendance">Mark Attendance</button>
+
+<h2>🟢 Attendance Records</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="attendanceList">
+    </tbody>
+</table>
+<h2>🌸 Leave Management</h2>
+
+<label>Employee ID:</label>
+<input type="text" id="leaveEmployeeId" placeholder="Enter employee ID">
+<br><br>
+
+<label>Leave Type:</label>
+<select id="leaveType">
+    <option value="Casual Leave">Casual Leave</option>
+    <option value="Sick Leave">Sick Leave</option>
+    <option value="Personal Leave">Personal Leave</option>
+</select>
+<br><br>
+
+<label>From Date:</label>
+<input type="date" id="leaveFrom">
+<br><br>
+
+<label>To Date:</label>
+<input type="date" id="leaveTo">
+<br><br>
+
+<button type="button" id="applyLeave">Apply Leave</button>
+
+<h2>🗓️ Leave Records</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Leave Type</th>
+            <th>From Date</th>
+            <th>To Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="leaveList">
+    </tbody>
+</table>
+<h2>💰 Salary Management</h2>
+
+<label>Employee ID:</label>
+<input type="text" id="salaryEmployeeId" placeholder="Enter employee ID">
+<br><br>
+
+<label>Basic Salary:</label>
+<input type="number" id="basicSalary" placeholder="Enter basic salary">
+<br><br>
+
+<label>Allowances:</label>
+<input type="number" id="allowances" placeholder="Enter allowances">
+<br><br>
+
+<label>Deductions:</label>
+<input type="number" id="deductions" placeholder="Enter deductions">
+<br><br>
+
+<button type="button" id="calculateSalary">Calculate Salary</button>
+
+<h2>🧾 Salary Records</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Basic Salary</th>
+            <th>Allowances</th>
+            <th>Deductions</th>
+            <th>Net Salary</th>
+        </tr>
+    </thead>
+    <tbody id="salaryList">
+    </tbody>
+</table>
+<h2>📊 Employee Statistics Dashboard</h2>
+
+<div class="chart-container">
+    <h3>👥 Employees by Department</h3>
+    <canvas id="departmentChart"></canvas>
+</div>
+
+<div class="chart-container">
+    <h3>📈 Attendance Overview</h3>
+    <canvas id="attendanceChart"></canvas>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
